@@ -44,7 +44,10 @@ export default function Quiz(){
     return (
         <div id= "quiz">
          <div id ="questions">
-            <QuestionTimer timeout={10000} onTimeOut = {handleSkipAnswer}/>
+            <QuestionTimer 
+            //whenever the key component is created and then destroyrd its unmounted and remounted that is we have a timer reinitiated wheneer we switch to the new question 
+            key ={activeQuestionIndex}
+            timeout={10000} onTimeOut = {handleSkipAnswer}/>
         <h2>{QUESTIONS[activeQuestionIndex].text}</h2>
         <ul id="answers">
             {/* to map the list of strings ie answer to list of jsx components */}
