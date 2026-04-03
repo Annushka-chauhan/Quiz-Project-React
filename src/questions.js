@@ -1,4 +1,6 @@
 export default [
+  //In this raw data its the first answer that is correct but we need to 
+  //reshuffle it so that its not the first answer which is always correct when displayed to the user 
   {
     id: 'q1',
     text: 'Which of the following definitions best describes React.js?',
